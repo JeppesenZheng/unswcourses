@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "types": ["@types/estree"],
     "module": "esnext",
     "baseUrl": "./",
     "moduleResolution": "node",
