@@ -30,11 +30,11 @@
             <h4>{{ exam.title }}</h4>
             <p>{{ exam.term }}</p>
           </div>
-          <a :href="exam.url" 
-             target="_blank" 
-             class="download-btn">
+          <button 
+            class="view-btn" 
+            @click="goToRevision(exam)">
             view
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: 'DPST1091T3Detail',
+  name: 'DPST109124T3Detail',
   props: {
     courseCode: {
       type: String,
@@ -67,9 +67,14 @@ export default {
         {
           title: 'Final Exam Revision',
           term: '24T3',
-          url: '/course/:courseCode/revision/:revisionId'
+          id: 'final'
         }
       ]
+    }
+  },
+  methods: {
+    goToRevision(exam) {
+      this.$router.push(`/course/DPST109124T3/revision/${exam.id}`)
     }
   }
 }
@@ -129,5 +134,22 @@ export default {
 
 .download-btn:hover {
   opacity: 0.8;
+}
+
+.view-btn {
+  background: #FFD700;
+  color: #2c3e50;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #ffd900;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 </style>
