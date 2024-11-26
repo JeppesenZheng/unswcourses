@@ -25,7 +25,8 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}  # 使用新创建的 token
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          force_orphan: true  # 这会清理历史记录，解决合并问题
+          force_orphan: true
+          cname: jeppesenzheng.github.io/unswcourses
