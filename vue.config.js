@@ -7,6 +7,7 @@ module.exports = defineConfig({
     ? '/unswcourses/'
     : '/',
   outputDir: 'dist',
+  indexPath: 'index.html',
   configureWebpack: {
     resolve: {
       alias: {
