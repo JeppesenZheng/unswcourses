@@ -91,6 +91,10 @@ export default {
           name: "Multi-file Programs",
           points: ["Header Files", "Source Files", "Compilation Process"],
         },
+        {
+          name: "Final_hurdle_questions",
+          points: ["Arrays", "Linked lists"]
+        },
       ],
     };
   },
